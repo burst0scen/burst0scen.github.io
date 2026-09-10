@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>vk克-虚拟歌手VK克作品与音乐内容介绍</title>
+<meta name="description" content="vk克是中文虚拟歌手领域的音乐创作者与虚拟形象，本页介绍VK克的音乐风格、代表作品、收听方式以及相关常见问题，帮助新听众快速了解这位虚拟歌手。">
+<meta name="keywords" content="vk克,VK克,VK克歌曲,VK克作品,虚拟歌手VK克,中文虚拟歌手">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --bg:#0d0b1a;
+    --bg-soft:#171432;
+    --panel:#1e1a3d;
+    --panel-2:#262148;
+    --line:rgba(160,140,255,.22);
+    --text:#ece9ff;
+    --muted:#a49ecb;
+    --accent:#8b6bff;
+    --accent-2:#ff6bb5;
+    --accent-3:#4fd6e0;
+    --radius:16px;
+    --shadow:0 18px 40px rgba(8,4,30,.55);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,sans-serif;
+    background:
+      radial-gradient(1100px 600px at 12% -8%,rgba(139,107,255,.30),transparent 60%),
+      radial-gradient(900px 520px at 92% 4%,rgba(255,107,181,.20),transparent 62%),
+      var(--bg);
+    color:var(--text);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{width:min(1180px,92vw);margin:0 auto;}
+
+  /* ===== 顶部导航 ===== */
+  .site-header{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(14px);
+    background:rgba(13,11,26,.82);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:18px;padding:14px 0;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand-mark{
+    width:44px;height:44px;border-radius:14px;flex:0 0 auto;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    display:grid;place-items:center;
+    font-weight:800;font-size:18px;letter-spacing:.5px;color:#fff;
+    box-shadow:0 10px 24px rgba(139,107,255,.45);
+  }
+  .brand-text b{display:block;font-size:17px;letter-spacing:.5px;}
+  .brand-text span{display:block;font-size:12px;color:var(--muted);letter-spacing:1.4px;}
+  .nav{display:flex;flex-wrap:wrap;gap:6px;}
+  .nav a{
+    padding:8px 14px;border-radius:999px;font-size:14px;color:var(--muted);
+    transition:.22s;
+  }
+  .nav a:hover{color:#fff;background:rgba(139,107,255,.18);}
+
+  /* ===== 首屏 ===== */
+  .hero{padding:64px 0 48px;}
+  .hero-grid{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+  }
+  .tagline{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;letter-spacing:1.6px;color:var(--accent-3);
+    border:1px solid rgba(79,214,224,.35);
+    padding:6px 14px;border-radius:999px;margin-bottom:22px;
+  }
+  .tagline i{width:6px;height:6px;border-radius:50%;background:var(--accent-3);display:inline-block;}
+  .hero h1{
+    font-size:clamp(28px,4.2vw,46px);
+    line-height:1.25;letter-spacing:.5px;margin-bottom:20px;
+  }
+  .hero h1 em{
+    font-style:normal;
+    background:linear-gradient(100deg,var(--accent-2),var(--accent-3));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p.lead{color:var(--muted);font-size:16px;max-width:56ch;margin-bottom:28px;}
+  .btn-row{display:flex;flex-wrap:wrap;gap:14px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:13px 26px;border-radius:999px;font-size:15px;font-weight:600;
+    transition:.24s;border:1px solid transparent;cursor:pointer;
+  }
+  .btn-primary{
+    background:linear-gradient(120deg,var(--accent),var(--accent-2));
+    color:#fff;box-shadow:0 14px 30px rgba(139,107,255,.38);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(139,107,255,.5);}
+  .btn-ghost{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.03);}
+  .btn-ghost:hover{background:rgba(139,107,255,.16);}
+
+  .hero-card{
+    background:linear-gradient(160deg,var(--panel),var(--panel-2));
+    border:1px solid var(--line);border-radius:22px;padding:28px;
+    box-shadow:var(--shadow);
+  }
+  .hero-card h3{font-size:16px;margin-bottom:16px;letter-spacing:.6px;}
+  .hero-card ul{list-style:none;display:grid;gap:12px;}
+  .hero-card li{
+    display:flex;gap:12px;align-items:flex-start;
+    font-size:14px;color:var(--muted);
+  }
+  .hero-card li b{color:var(--text);font-weight:600;}
+  .dot{
+    width:9px;height:9px;border-radius:50%;margin-top:8px;flex:0 0 auto;
+    background:linear-gradient(135deg,var(--accent),var(--accent-3));
+  }
+
+  /* ===== 通用区块 ===== */
+  section{padding:56px 0;}
+  .sec-head{margin-bottom:30px;}
+  .sec-head span{
+    font-size:13px;letter-spacing:2px;color:var(--accent-3);text-transform:uppercase;
+  }
+  .sec-head h2{font-size:clamp(21px,2.6vw,29px);margin-top:8px;letter-spacing:.5px;}
+  .sec-head p{color:var(--muted);margin-top:10px;max-width:70ch;font-size:15px;}
+
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+
+  .card{
+    background:linear-gradient(165deg,rgba(38,33,72,.9),rgba(23,20,50,.95));
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px;transition:.26s;
+  }
+  .card:hover{transform:translateY(-4px);border-color:rgba(139,107,255,.5);}
+  .card .ico{
+    width:44px;height:44px;border-radius:13px;display:grid;place-items:center;
+    font-size:19px;margin-bottom:16px;
+    background:rgba(139,107,255,.16);border:1px solid rgba(139,107,255,.32);
+  }
+  .card h3{font-size:17px;margin-bottom:10px;}
+  .card p{font-size:14px;color:var(--muted);}
+
+  /* 作品列表 */
+  .track{
+    display:flex;align-items:center;gap:18px;
+    padding:18px 22px;border-radius:14px;
+    background:rgba(30,26,61,.72);border:1px solid var(--line);
+    transition:.22s;
+  }
+  .track:hover{background:rgba(139,107,255,.14);transform:translateX(4px);}
+  .track .no{
+    font-size:15px;font-weight:700;color:var(--accent-3);
+    width:34px;flex:0 0 auto;font-variant-numeric:tabular-nums;
+  }
+  .track .info{flex:1;min-width:0;}
+  .track .info b{display:block;font-size:15px;margin-bottom:4px;}
+  .track .info span{font-size:13px;color:var(--muted);}
+  .track .tag{
+    font-size:12px;padding:4px 12px;border-radius:999px;white-space:nowrap;
+    background:rgba(255,107,181,.14);color:#ffb3d8;border:1px solid rgba(255,107,181,.3);
+  }
+  .track-list{display:grid;gap:14px;}
+
+  /* 风格标签 */
+  .chip-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;}
+  .chip{
+    padding:9px 18px;border-radius:999px;font-size:14px;
+    background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--muted);
+    transition:.2s;
+  }
+  .chip:hover{color:#fff;border-color:var(--accent);background:rgba(139,107,255,.2);}
+
+  /* 时间线 */
+  .timeline{position:relative;padding-left:26px;display:grid;gap:26px;}
+  .timeline::before{
+    content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;
+    background:linear-gradient(180deg,var(--accent),var(--accent-2),transparent);
+  }
+  .tl-item{position:relative;}
+  .tl-item::before{
+    content:"";position:absolute;left:-26px;top:8px;
+    width:14px;height:14px;border-radius:50%;
+    background:var(--bg);border:3px solid var(--accent);
+  }
+  .tl-item h3{font-size:16px;margin-bottom:6px;}
+  .tl-item p{font-size:14px;color:var(--muted);}
+
+  /* FAQ */
+  .faq{display:grid;gap:14px;}
+  details{
+    background:rgba(30,26,61,.7);border:1px solid var(--line);
+    border-radius:14px;padding:18px 22px;transition:.2s;
+  }
+  details[open]{border-color:rgba(139,107,255,.5);background:rgba(38,33,72,.85);}
+  summary{
+    cursor:pointer;font-size:15px;font-weight:600;list-style:none;
+    display:flex;justify-content:space-between;gap:16px;align-items:center;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{
+    content:"+";font-size:20px;color:var(--accent-3);font-weight:400;line-height:1;
+    transition:.2s;
+  }
+  details[open] summary::after{content:"–";}
+  details p{margin-top:14px;font-size:14px;color:var(--muted);}
+
+  /* 侧栏提示 */
+  .aside-box{
+    background:linear-gradient(150deg,rgba(139,107,255,.18),rgba(255,107,181,.12));
+    border:1px solid var(--line);border-radius:var(--radius);padding:26px;
+  }
+  .aside-box h3{font-size:16px;margin-bottom:12px;}
+  .aside-box p{font-size:14px;color:var(--muted);margin-bottom:10px;}
+
+  /* 页脚 */
+  .site-footer{
+    border-top:1px solid var(--line);margin-top:40px;
+    padding:40px 0 30px;background:rgba(10,8,22,.7);
+  }
+  .footer-grid{
+    display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;margin-bottom:28px;
+  }
+  .footer-grid h4{font-size:15px;margin-bottom:14px;letter-spacing:.5px;}
+  .footer-grid p,.footer-grid li{font-size:13.5px;color:var(--muted);}
+  .footer-grid ul{list-style:none;display:grid;gap:9px;}
+  .footer-grid a:hover{color:var(--accent-3);}
+  .copyright{
+    border-top:1px solid var(--line);padding-top:20px;
+    font-size:13px;color:var(--muted);display:flex;justify-content:space-between;
+    flex-wrap:wrap;gap:10px;
+  }
+
+  /* 响应式 */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:34px;}
+    .grid-3,.grid-4{grid-template-columns:repeat(2,1fr);}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:640px){
+    .header-inner{flex-direction:column;align-items:flex-start;gap:12px;}
+    .nav{gap:4px;}
+    .nav a{padding:6px 11px;font-size:13px;}
+    .hero{padding:42px 0 30px;}
+    section{padding:40px 0;}
+    .grid-3,.grid-4,.grid-2{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+    .track{flex-wrap:wrap;gap:12px;}
+    .track .tag{order:3;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <div class="brand-mark">VK</div>
+      <div class="brand-text">
+        <b>VK克</b>
+        <span>VIRTUAL SINGER</span>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#intro">简介</a>
+      <a href="#works">代表作品</a>
+      <a href="#style">音乐风格</a>
+      <a href="#listen">收听方式</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="tagline"><i></i>虚拟歌手 · 中文音乐内容</div>
+        <h1>认识 <em>VK克</em>：一位活跃在虚拟歌手领域的中文音乐形象</h1>
+        <p class="lead">
+          VK克是中文虚拟歌手相关创作中使用的一个虚拟形象与演唱身份。围绕这一形象，创作者们制作了多种风格的中文歌曲，
+          内容多以流行、抒情与轻电子为主，适合喜欢虚拟歌手与二次元音乐的听众了解与收听。
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#works">查看代表作品 →</a>
+          <a class="btn btn-ghost" href="#intro">先了解基本概念</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h3>快速了解 VK克</h3>
+        <ul>
+          <li><span class="dot"></span><span><b>身份定位：</b>中文虚拟歌手形象与演唱身份</span></li>
+          <li><span class="dot"></span><span><b>内容形式：</b>以原创与翻唱中文歌曲为主</span></li>
+          <li><span class="dot"></span><span><b>常见风格：</b>流行、抒情、轻电子、国风</span></li>
+          <li><span class="dot"></span><span><b>适合人群：</b>虚拟歌手听众、二次元音乐爱好者</span></li>
+          <li><span class="dot"></span><span><b>收听渠道：</b>常见于主流音乐平台与视频平台</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 简介 -->
+  <section id="intro">
+    <div class="wrap">
+      <div class="sec-head">
+        <span>Introduction</span>
+        <h2>VK克是什么：从概念到收听的基本认识</h2>
+        <p>
+          对刚接触这一名字的听众来说，最常提出的问题就是“VK克到底指什么”。下面从概念、内容和收听三个角度做基础说明，
+          帮助你建立清晰的认知，而不是被各种零散信息干扰。
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <div class="ico">🎤</div>
+          <h3>虚拟歌手身份</h3>
+          <p>
+            虚拟歌手指的是由创作者借助声库或音频技术塑造出的演唱形象。VK克属于这一范畴，
+            其“声音”与“形象”由创作者共同构建，用于承载中文歌曲的演唱与表达。
+          </p>
+        </article>
+        <article class="card">
+          <div class="ico">🎵</div>
+          <h3>以中文歌曲为核心</h3>
+          <p>
+            相关内容以中文歌词为主，题材涵盖情感、日常、幻想与叙事等方向。
+            由于创作者构成较为分散，不同作品的编曲与演唱处理会有明显差异。
+          </p>
+        </article>
+        <article class="card">
+          <div class="ico">📡</div>
+          <h3>内容分散在多平台</h3>
+          <p>
+            与传统的唱片歌手不同，这类内容通常发布在音乐平台与视频平台上，
+            由不同作者分别上传，因此并不存在唯一的“官方歌单”，需要自行筛选。
+          </p>
+        </article>
+      </div>
+
+      <div class="chip-row">
+        <span class="chip">虚拟歌手</span>
+        <span class="chip">中文原创歌曲</span>
+        <span class="chip">二次元音乐</span>
+        <span class="chip">翻唱与改编</span>
+        <span class="chip">轻电子</span>
+        <span class="chip">抒情流行</span>
+        <span class="chip">国风尝试</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 代表作品 -->
+  <section id="works">
+    <div class="wrap">
+      <div class="sec-head">
+        <span>Works</span>
+        <h2>代表作品与常见曲目类型</h2>
+        <p>
+          由于相关作品由不同创作者发布，曲目数量与名称会随时间变化。以下按常见类型进行归纳，
+          便于你按偏好寻找想听的内容，而不是把某一首当作唯一入口。
+        </p>
+      </div>
+
+      <div class="track-list">
+        <div class="track">
+          <span class="no">01</span>
+          <div class="info">
+            <b>抒情慢歌类</b>
+            <span>以钢琴、弦乐与柔和合成器为主，重视歌词叙事与情绪递进。</span>
+          </div>
+          <span class="tag">情感叙事</span>
+        </div>
+        <div class="track">
+          <span class="no">02</span>
+          <div class="info">
+            <b>流行节奏类</b>
+            <span>中速鼓点配合清晰旋律线，适合日常循环收听，副歌记忆点较强。</span>
+          </div>
+          <span class="tag">流行</span>
+        </div>
+        <div class="track">
+          <span class="no">03</span>
+          <div class="info">
+            <b>轻电子与氛围类</b>
+            <span>使用合成器铺底与电子音色，营造空间感，常见于主题性较强的作品。</span>
+          </div>
+          <span class="tag">电子</span>
+        </div>
+        <div class="track">
+          <span class="no">04</span>
+          <div class="info">
+            <b>国风与民族元素类</b>
+            <span>引入笛、古筝等音色或五声音阶写法，与中文歌词的语感结合较紧密。</span>
+          </div>
+          <span class="tag">国风</span>
+        </div>
+        <div class="track">
+          <span class="no">05</span>
+          <div class="info">
+            <b>翻唱与改编类</b>
+            <span>以已有歌曲为素材重新编曲或重新演绎，是虚拟歌手内容中数量较多的一类。</span>
+          </div>
+          <span class="tag">翻唱</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 音乐风格 -->
+  <section id="style">
+    <div class="wrap">
+      <div class="sec-head">
+        <span>Style</span>
+        <h2>音乐风格与听感特点</h2>
+        <p>
+          VK克相关作品的听感并不完全统一，这与创作者群体分散有关。但从整体来看，
+          仍可以归纳出几个相对稳定的特征，帮助你判断是否符合自己的口味。
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <div class="ico">🎧</div>
+          <h3>旋律优先，副歌突出</h3>
+          <p>
+            多数作品把记忆点放在副歌部分，主歌相对克制，整体结构接近主流流行歌曲，
+            初次收听时比较容易跟上。
+          </p>
+        </article>
+        <article class="card">
+          <div class="ico">✍️</div>
+          <h3>歌词偏叙事与情绪表达</h3>
+          <p>
+            中文歌词是这类内容的重要部分，题材常围绕情感、成长与想象展开，
+            对喜欢边听边看歌词的听众较为友好。
+          </p>
+        </article>
+        <article class="card">
+          <div class="ico">🎛️</div>
+          <h3>编曲层次因作者而异</h3>
+          <p>
+            有的作品编曲简洁，突出人声；有的加入较多电子音色与鼓组。
+            同一名字下的听感差异，本质上来自不同创作者的取向。
+          </p>
+        </article>
+        <article class="card">
+          <div class="ico">🌙</div>
+          <h3>适合安静场景收听</h3>
+          <p>
+            由于整体节奏偏中慢、音色偏柔和，这类作品常被用于夜间、通勤或专注时的背景音乐。
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 收听方式 -->
+  <section id="listen">
+    <div class="wrap">
+      <div class="sec-head">
+        <span>How to Listen</span>
+        <h2>如何收听与筛选相关内容</h2>
+        <p>
+          这类内容没有统一的发行渠道，因此“怎么找、怎么筛”比“去哪里点一下”更重要。
+          下面给出几个实用做法。
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="timeline">
+          <div class="tl-item">
+            <h3>第一步：用关键词组合检索</h3>
+            <p>在音乐或视频平台搜索时，把名字与“歌曲”“翻唱”“原创”等词组合，能减少无关结果。</p>
+          </div>
+          <div class="tl-item">
+            <h3>第二步：按作者而非按名字收藏</h3>
+            <p>由于内容由不同创作者发布，关注你喜欢的具体作者，比只关注名字更容易持续找到新作品。</p>
+          </div>
+          <div class="tl-item">
+            <h3>第三步：先听副歌再决定</h3>
+            <p>试听时可以直接跳到副歌，快速判断编曲与演唱处理是否符合偏好，节省筛选时间。</p>
+          </div>
+          <div class="tl-item">
+            <h3>第四步：留意歌词与制作信息</h3>
+            <p>查看简介中的词曲、调校与混音署名，有助于理解作品差异，也方便找到同类型创作者。</p>
+          </div>
+        </div>
+
+        <aside class="aside-box">
+          <h3>收听时的小提示</h3>
+          <p>· 不同平台的音质与版本可能不一致，同一首歌可能存在多个重制版本。</p>
+          <p>· 部分作品为二次创作，转载与使用需遵守原作者标注的授权说明。</p>
+          <p>· 若用于视频配乐等公开场景，建议先确认是否允许商用或二次发布。</p>
+          <p>· 遇到名称相近但内容完全不同的作品时，以作者与发布时间为准进行区分。</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span>FAQ</span>
+        <h2>关于 VK克 的常见问题</h2>
+        <p>整理初次接触这一名字时最容易被问到的问题，给出稳妥、可核实的回答方向。</p>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>VK克是真人歌手吗？</summary>
+          <p>
+            通常所说的 VK克 属于虚拟歌手范畴，其演唱由音频技术生成或处理，形象也由创作者设计，
+            并非以真人身份出道的歌手。具体作品的实际制作人员以发布页面标注为准。
+          </p>
+        </details>
+        <details>
+          <summary>为什么搜到的歌曲风格差别很大？</summary>
+          <p>
+            因为相关作品由不同创作者分别制作，编曲、调校与混音习惯各不相同，
+            所以听感差异明显。这属于这类内容生态的正常现象，并不代表出现了错误信息。
+          </p>
+        </details>
+        <details>
+          <summary>有没有官方歌单或固定专辑？</summary>
+          <p>
+            目前并没有统一的官方歌单。内容分散在各平台的个人账号下，
+            更实际的做法是收藏你认可的作者，或自行整理歌单。
+          </p>
+        </details>
+        <details>
+          <summary>可以把这些歌曲用于自己的视频吗？</summary>
+          <p>
+            需要看具体作品的授权说明。部分作品允许非商用转载并注明出处，部分则限制使用。
+            在公开发布前，请先阅读原作者的声明，避免产生版权问题。
+          </p>
+        </details>
+        <details>
+          <summary>想进一步了解，应该从哪里入手？</summary>
+          <p>
+            建议先完整听几首不同类型的作品，感受风格差异，再去看作品简介中的制作信息，
+            这样比直接查找零散介绍更容易建立整体认知。
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>关于本站</h4>
+        <p>
+          本站为围绕“VK克”这一虚拟歌手相关主题整理的信息性页面，
+          用于帮助听众了解基本概念、内容类型与收听方式，不提供音频文件下载。
+        </p>
+      </div>
+      <div>
+        <h4>页面导航</h4>
+        <ul>
+          <li><a href="#intro">基本简介</a></li>
+          <li><a href="#works">代表作品</a></li>
+          <li><a href="#style">音乐风格</a></li>
+          <li><a href="#listen">收听方式</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>版权说明</h4>
+        <ul>
+          <li>相关歌曲版权归各原作者所有</li>
+          <li>转载与使用请遵守原作者声明</li>
+          <li>本页内容仅作介绍与索引用途</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2024 VK克 主题信息页</span>
+      <span>内容以实际发布页面为准，如有差异请以原作者信息为准</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+  </html>
